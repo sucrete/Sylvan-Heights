@@ -1,0 +1,136 @@
+.side-bar {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: -100%;
+  width: 465px;
+  padding: 40px 30px;
+  padding-top: 50px;
+  height: 100%;
+  display: block;
+  background-color: white;
+  backdrop-filter: blur(7px);
+  z-index: 1900;
+  transition: all 300ms ease;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow: visible;
+  // background-image: url(./../assets/images/logo/oconee-logo-ring-light-grey.svg);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: 197% 50%;
+  @media #{$large-mobile} {
+    width: 95%;
+  }
+  &.show {
+    right: 0;
+    overflow-y: auto;
+    box-shadow: -5px 0 30px 50px #00000059;
+  }
+  button {
+    width: 42px;
+    height: 42px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border: none;
+    background-color: $primary-color;
+    svg {
+      width: 14px;
+      @include center-it;
+      line {
+        fill: none;
+        stroke: white;
+        stroke-width: 1px;
+      }
+    }
+  }
+}
+
+.mobile-menu-main {
+  nav {
+    ul {
+      padding: 0 20px;
+      display: block;
+      @include monospaced(black);
+      font-size: 14px;
+      li {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        a {
+          &.main {
+            padding: 12px 0 12px 0;
+            border-bottom: 1px solid #f3f3f3;
+            cursor: pointer;
+          }
+          &.rts-btn {
+            svg {
+              width: 14px;
+              polygon {
+                fill: white;
+              }
+            }
+          }
+        }
+
+        &.has-droupdown {
+          position: relative;
+          a {
+            .chevron-wrapper {
+              width: 42px;
+              height: 42px;
+              background-color: $primary-color;
+              float: right;
+              position: absolute;
+              right: 0%;
+              top: 4px;
+              svg {
+                width: 14px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(0deg);
+                transition: transform 0.35s ease;
+                line {
+                  fill: none;
+                  stroke: white;
+                  stroke-width: 1px;
+                }
+              }
+            }
+          }
+          ul {
+            padding: 0;
+
+            a {
+              padding: 10px 0;
+              font-weight: 500;
+              font-size: 14px;
+            }
+
+            li {
+              margin: 0 !important;
+              border-bottom: 1px solid #f3f3f3;
+              font-size: 14px;
+              padding-left: 10px;
+            }
+          }
+          &.mm-active {
+            a {
+              .chevron-wrapper {
+                svg {
+                  transform: translate(-50%, -50%) rotate(180deg);
+                }
+              }
+            }
+          }
+        }
+        a {
+          display: block;
+        }
+      }
+    }
+  }
+}
