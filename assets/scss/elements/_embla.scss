@@ -335,13 +335,50 @@
     .embla {
       padding-top: 0rem;
       padding-bottom: 0rem;
-      .embla-thumbs__slide {
-        .embla-thumbs__slide__number {
-          font-size: 15px;
+      .embla__viewport {
+        .embla__container {
+          width: unset;
+          .embla__slide {
+            .embla__slide__wrapper {
+              height: unset;
+              .row {
+                gap: 20px;
+                [class*="col"] {
+                  height: unset;
+                  .course-image-container {
+                    min-height: 250px;
+                    min-width: 344px;
+                  }
+                  &.details-side {
+                    padding-inline: 0px;
+                    padding-bottom: 3rem;
+                    h3 {
+                      font-size: 36px;
+                    }
+                  }
+                  &.pic-side {
+                    padding-left: 0;
+                  }
+                }
+              }
+            }
+          }
         }
       }
+
       .embla-thumbs {
-        --thumbs-slide-height: 4rem; 
+        --thumbs-slide-height: 5rem;
+        .embla-thumbs__viewport {
+          .embla-thumbs__container {
+            .embla-thumbs__slide {
+              .embla-thumbs__slide__number {
+                font-size: 14px;
+                font-weight: 700;
+                border-radius: 14px;
+              }
+            }
+          }
+        }
       }
     }
   }

@@ -11,7 +11,7 @@
   background-color: white;
   backdrop-filter: blur(7px);
   z-index: 1900;
-  transition: all 300ms ease;
+  transition: all 600ms cubic-bezier(.02,.61,.01,1.01);
   display: flex;
   flex-direction: column;
   overflow-y: auto;

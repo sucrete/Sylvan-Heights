@@ -22,8 +22,10 @@
   }
   &:hover {
     background-color: $secondary-color;
-    box-shadow: rgba($primary-color, 0.3) 0px 4px 6px -1px,
-      rgba($primary-color, 0.1) 0px 2px 4px -1px, inset 0 0.5px 2px #ffffffa0;
+    box-shadow:
+      rgba($primary-color, 0.3) 0px 4px 6px -1px,
+      rgba($primary-color, 0.1) 0px 2px 4px -1px,
+      inset 0 0.5px 2px #ffffffa0;
   }
 }
 
@@ -174,10 +176,15 @@ $modal-margin: 3rem;
       border-radius: 10px;
       overflow: hidden;
       border: none;
-      box-shadow: #003d3d0a 0px 64px 64px -32px, #003d3d0a 0px 32px 32px -16px,
-        #003d3d0a 0px 16px 16px -8px, #003d3d0a 0px 12px 12px -6px,
-        #003d3d0a 0px 6px 6px -3px, #003d3d0a 0px 3px 3px -1.5px,
-        #001f1f14 0px 1px 1px -0.5px, #003d3d0a 0px 0px 0px 1px;
+      box-shadow:
+        #003d3d0a 0px 64px 64px -32px,
+        #003d3d0a 0px 32px 32px -16px,
+        #003d3d0a 0px 16px 16px -8px,
+        #003d3d0a 0px 12px 12px -6px,
+        #003d3d0a 0px 6px 6px -3px,
+        #003d3d0a 0px 3px 3px -1.5px,
+        #001f1f14 0px 1px 1px -0.5px,
+        #003d3d0a 0px 0px 0px 1px;
       .modal-header {
         padding: $modal-margin;
         padding-bottom: 0.25rem;
@@ -399,7 +406,8 @@ $outline-color: #e6e6e6;
       &:hover {
         border-color: #ddd;
         z-index: 77;
-        box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 6px -1px,
+        box-shadow:
+          rgba(0, 0, 0, 0.08) 0px 4px 6px -1px,
           rgba(0, 0, 0, 0.04) 0px 2px 4px -1px;
       }
       &-limned {
@@ -580,7 +588,8 @@ section {
                   }
 
                   &:hover {
-                    box-shadow: 0 0 0 1.25px rgba(0, 0, 0, 0.1),
+                    box-shadow:
+                      0 0 0 1.25px rgba(0, 0, 0, 0.1),
                       rgba(0, 0, 0, 0.05) 0px 10px 15px -3px,
                       rgba(0, 0, 0, 0.025) 0px 4px 6px -2px;
                     // box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 15px -3px, rgba(0, 0, 0, 0.025) 0px 4px 6px -2px;
@@ -651,7 +660,8 @@ section {
           padding: 11px 19px 14px 19px;
           margin-top: 1.5rem;
           transition: all 0.25s ease;
-          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+          box-shadow:
+            rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
             rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
           svg {
             width: 24px;
@@ -664,7 +674,8 @@ section {
           &:hover {
             background: #005042;
             color: rgba(255, 255, 255, 0.927);
-            box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 15px -3px,
+            box-shadow:
+              rgba(0, 0, 0, 0.2) 0px 10px 15px -3px,
               rgba(0, 0, 0, 0.09) 0px 4px 6px -2px;
           }
         }
@@ -679,17 +690,48 @@ section {
               display: block;
               border-radius: 29px;
               transition: all 0.25s ease;
-              box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 15px -3px,
+              box-shadow:
+                rgba(0, 0, 0, 0.15) 0px 10px 15px -3px,
                 rgba(0, 0, 0, 0.075) 0px 4px 6px -2px;
               overflow: hidden;
               &:hover {
                 transform: translateY(-2px);
-                box-shadow: rgba(0, 0, 0, 0.15) 0px 20px 25px -5px,
+                box-shadow:
+                  rgba(0, 0, 0, 0.15) 0px 20px 25px -5px,
                   rgba(0, 0, 0, 0.07) 0px 10px 10px -5px;
               }
             }
           }
         }
+      }
+    }
+    .flair {
+      position: absolute;
+
+      width: 25px;
+      height: auto;
+      path {
+        fill: white;
+      }
+      &:nth-of-type(1) {
+        top: 10px;
+        left: 10px;
+        transform: rotate(135deg);
+      }
+      &:nth-of-type(2) {
+        top: 10px;
+        right: 10px;
+        transform: rotate(-135deg);
+      }
+      &:nth-of-type(3) {
+        bottom: 10px;
+        right: 10px;
+        transform: rotate(-45deg);
+      }
+      &:nth-of-type(4) {
+        bottom: 10px;
+        left: 10px;
+        transform: rotate(45deg);
       }
     }
   }
