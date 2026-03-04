@@ -23,6 +23,7 @@ export class Footer extends LitElement {
                         <li><a href="/rates.html">rates</a></li>
                         <li><a href="/passes.html">passes</a></li>
                         <li><a href="/course.html">course</a></li>
+                        <li><a href="/events.html">events</a></li>
                         <li><a href="/host-an-event.html">host an event</a></li>
                         <li><a href="/contact.html">contact</a></li>
                         <li><a href="/guidelines.html">guidelines</a></li>

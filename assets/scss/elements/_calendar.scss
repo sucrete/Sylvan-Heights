@@ -232,7 +232,7 @@ $modal-margin: 3rem;
         padding-top: 0;
         .date-wrapper {
           color: hsla(50, 8%, 45%, 0.836);
-          letter-spacing: 0.2px;
+          font-size: 15px;
           .date-icon {
             position: relative;
             width: auto;
@@ -252,9 +252,10 @@ $modal-margin: 3rem;
         }
         .modal-body {
           padding: 0;
-          color: #767364;
-          letter-spacing: 0.2px;
+          color: #262626;
+          // letter-spacing: 0.2px;
           white-space: pre-line;
+          font-size: 15px;
         }
       }
       .modal-footer {
@@ -327,7 +328,7 @@ $outline-color: #e6e6e6;
       }
       .event-list-date-wrapper {
         color: hsla(50, 8%, 45%, 0.836);
-        letter-spacing: 0.2px;
+        font-size: 15px;
         .date-icon {
           display: inline-block;
           position: relative;
@@ -350,8 +351,8 @@ $outline-color: #e6e6e6;
       }
       .event-list-description {
         padding: 0;
-        color: #767364;
-        letter-spacing: 0.2px;
+        color: #262626;
+        font-size: 15px;
         line-height: 1.4;
         padding-top: 0.5rem;
         white-space: pre-line;
