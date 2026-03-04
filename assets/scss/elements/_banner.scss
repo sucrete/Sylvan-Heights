@@ -502,7 +502,7 @@ $mobile-home-page-gradient: linear-gradient(
   @media #{$sm-layout} {
     height: 600px !important;
     .cornered-container {
-      margin-top: 5rem;
+      margin-top: 9rem;
       margin-bottom: 2.25rem;
       .cornered-box {
         margin-top: 0.5rem;
@@ -1183,6 +1183,13 @@ $subpage-height: 450px;
       .overlay {
         background-image: $mobile-home-page-gradient;
         opacity: 0.7;
+      }
+    }
+  }
+  .banner-four-area {
+    &.banner-subpage {
+      .container {
+        margin-bottom: 8.5rem;
       }
     }
   }

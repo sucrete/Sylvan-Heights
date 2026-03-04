@@ -1934,10 +1934,15 @@ section.perks {
   }
 }
 @media (max-width: 992px) {
+  main {
+    &.guidelines-page-body {
+      padding-block: 3rem;
+    }
+  }
   section {
     &.mobile-padding {
       padding-top: 3rem;
-      padding-bottom: 12rem;
+      padding-bottom: 2rem;
       &.booking-container {
         .row {
           padding-top: 0;
@@ -1946,8 +1951,18 @@ section.perks {
         }
       }
       &.rates-page-body {
-        padding-top: 9rem;
+        padding-top: 7rem;
       }
+      &.host-an-event-page-body {
+        padding-top: 7rem;
+        padding-bottom: 12rem;
+        .contact-area-form-wrapper {
+          h3 {
+            font-size: 38px;
+          }
+        }
+      }
+
       &.why-choose-us-working-process {
         padding-bottom: 3rem;
         [class*="shape"] {
