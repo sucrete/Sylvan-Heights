@@ -285,13 +285,13 @@ $modal-margin: 3rem;
             border: none;
           }
           &.modal-attachment {
-            border: 1.5px solid $accent-color;
+            border: 1.5px solid #002d25;
             background-color: transparent;
-            color: $accent-color;
+            color: #002d25;
             &:hover {
               color: white;
-              background-color: $accent-color;
-              border-color: $accent-color;
+              background-color: $secondary-color;
+              border-color: $secondary-color;
             }
           }
         }
@@ -365,8 +365,7 @@ $outline-color: #e6e6e6;
           display: flex;
           align-items: center;
           justify-content: center;
-          // bottom: 0.5rem;
-          // right: 3rem;
+          border: 1.5px solid #002d25;
           border-radius: 99px;
           background-color: $primary-color;
           text-decoration: none;
@@ -385,18 +384,18 @@ $outline-color: #e6e6e6;
             color: rgba(255, 255, 255, 0.8);
           }
           &:hover {
-            // color: rgba(255, 255, 255, 0.8);
             background-color: $secondary-color;
+            border-color: $secondary-color;
           }
         }
         .event-list-flyer-btn {
-          border: 1.5px solid $accent-color;
+          border: 1.5px solid #002d25;
           background-color: white;
-          color: $accent-color;
+          color: #002d25;
           &:hover {
             color: white;
-            background-color: $accent-color;
-            border-color: $accent-color;
+            background-color: $secondary-color;
+            border-color: $secondary-color;
           }
         }
         &.no-buttons {
@@ -559,29 +558,38 @@ section {
                         white-space: pre-line;
                         padding-top: 0;
                       }
-                      .register-button {
-                        // float: right;
-                        bottom: 0.5rem;
-                        right: 3rem;
-                        background-color: black;
-                        text-decoration: none;
-                        transition: all 0.35s
-                          cubic-bezier(0.175, 0.885, 0.32, 1.275);
-                        padding: 6px 12px 6px 14px;
-                        box-shadow: none;
-                        color: white;
-                        .button-text {
-                          transition: color 0.15s ease;
+                      .event-list-footer-home {
+                        margin-top: 1.5rem;
+                        .register-button,
+                        .flyer-button {
+                          bottom: 0.5rem;
+                          right: 3rem;
+                          background-color: #002d25;
+                          text-decoration: none;
+                          border: none;
+                          transition: all 0.35s
+                            cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                          padding: 6px 14px 6px 14px;
+                          box-shadow: none;
                           color: white;
+                          .button-text {
+                            transition: color 0.15s ease;
+                            color: white;
+                          }
+                          &:hover {
+                            background-color: $secondary-color;
+                          }
                         }
-                        .kinked-arrow {
-                          position: relative;
-                          padding-left: 5px;
-                          top: 2px;
-                          color: rgba(255, 255, 255, 0.8);
-                        }
-                        &:hover {
-                          color: rgba(255, 255, 255, 0.8);
+                        .flyer-button {
+                          color: $primary-color;
+                          padding: 4.5px 12.5px 4.5px 12.5px;
+                          border: 1.5px solid $primary-color;
+                          background-color: transparent;
+                          &:hover {
+                            color: white;
+                            border-color: $secondary-color;
+                            background-color: $secondary-color;
+                          }
                         }
                       }
                     }
@@ -594,16 +602,7 @@ section {
                       rgba(0, 0, 0, 0.025) 0px 4px 6px -2px;
                     // box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 15px -3px, rgba(0, 0, 0, 0.025) 0px 4px 6px -2px;
                   }
-                  &.includes-register-button {
-                    .event-content-row {
-                      .content-side {
-                        padding-bottom: 1.4rem;
-                        .register-button {
-                          margin-top: 1.5rem;
-                        }
-                      }
-                    }
-                  }
+              
                 }
               }
             }
@@ -711,7 +710,7 @@ section {
       width: 25px;
       height: auto;
       path {
-        fill: white;
+        fill: #002d25;
       }
       &:nth-of-type(1) {
         top: 10px;

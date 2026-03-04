@@ -1,6 +1,6 @@
-//* Creates event list for home page 
+//* Creates event list for home page
 const calendarQuery =
-  "https://s52wtqv4.api.sanity.io/v2025-12-18/data/query/production?query=%7B%0A++%22events%22%3A+*%5B_type+%3D%3D+%22event%22%5D%0A%7D&perspective=published";
+  "https://0yddk171.api.sanity.io/v2026-03-04/data/query/production?query=%7B%0A++%22events%22%3A+*%5B_type+%3D%3D+%22event%22%5D%2C%0A++%22images%22%3A+*%5B_type+%3D%3D+%22sanity.imageAsset%22%5D%0A%7D&perspective=published";
 
 const todaysDate = new Date();
 const futureDate = todaysDate.setMonth(todaysDate.getMonth() + 5);
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
       content: function (props) {
         let segs = sliceEvents(props, true);
         const sortedSegs = segs.sort(
-          (a, b) => new Date(b.range.start) - new Date(a.range.start)
+          (a, b) => new Date(b.range.start) - new Date(a.range.start),
         );
         let html =
           segs.length > 0
@@ -65,30 +65,54 @@ document.addEventListener("DOMContentLoaded", function () {
                                 moment(seg.range.start)
                                   .add(1, "days")
                                   .format("dddd, MMMM Do")
-                                } 
-                              ${ 
+                              } 
+                              ${
                                 moment(seg.range.end).isAfter(
-                                  moment(seg.range.start).add(1, "days")
+                                  moment(seg.range.start).add(1, "days"),
                                 )
                                   ? "&nbsp;- " +
-                                    moment(seg.range.end).format(
-                                      "ddd, MMMM Do"
-                                    )
+                                    moment(seg.range.end).format("ddd, MMMM Do")
                                   : ""
                               }
                             </div>
                             
                           </div>
                           <div class="event-list-description">${seg.def.extendedProps?.eventDescription}</div>
-                            ${
-                              seg.def.extendedProps?.linkQuestion
-                                ? "<a href='" +
-                                  seg.def.extendedProps?.linkDeets.linkURL +
-                                  "' class='register-button pill' target='_blank'>" +
-                                  seg.def.extendedProps?.linkDeets?.linkText +
-                                  "<span class='kinked-arrow'>↳</span></a>"
-                                : ""
-                            }
+
+                          ${
+                            seg.def.extendedProps.linkQuestion ||
+                            seg.def.extendedProps.flyerQuestion
+                              ? `
+                            <div class="event-list-footer-home">
+                              ${
+                                seg.def.extendedProps?.flyer
+                                  ? `<a href="${
+                                      data.images.find(
+                                        (image) =>
+                                          image._id ===
+                                          seg.def.extendedProps.flyer.asset
+                                            ._ref,
+                                      ).url
+                                    }"
+                                    class="flyer-button pill"
+                                    target="_blank"
+                                    >view flyer</a>`
+                                  : ""
+                              }
+                              ${
+                                seg.def.extendedProps?.linkQuestion
+                                  ? "<a href='" +
+                                    seg.def.extendedProps?.linkDeets.linkURL +
+                                    "' class='register-button pill' target='_blank'>" +
+                                    seg.def.extendedProps?.linkDeets?.linkText +
+                                    "</a>"
+                                  : ""
+                              }
+                            </div>
+                            `
+                              : ""
+                          }
+                           
                         </div>
                       </div>
                     </div>

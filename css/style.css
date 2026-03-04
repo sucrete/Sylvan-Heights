@@ -12076,14 +12076,14 @@ Copyright (c) 2015 Daniel Eden
 
 .slyde:nth-child(1) {
   z-index: 10;
-  transform: rotate(2deg) translate(-50%, -50%);
+  transform: rotate(1deg) translate(-50%, -50%);
 }
 .slyde:nth-child(1):before {
   content: "1";
 }
 .slyde:nth-child(1).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(2deg) translate(-50%, -15rem);
+  transform: rotate(1deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -12098,56 +12098,12 @@ Copyright (c) 2015 Daniel Eden
 
 .slyde:nth-child(2) {
   z-index: 9;
-  transform: rotate(0deg) translate(-50%, -50%);
+  transform: rotate(-1deg) translate(-50%, -50%);
 }
 .slyde:nth-child(2):before {
   content: "2";
 }
 .slyde:nth-child(2).leave {
-  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(0deg) translate(-50%, -15rem);
-  opacity: 0;
-  pointer-events: none;
-  filter: sepia(0%);
-}
-.slyde.active {
-  transform: rotate(0) translate(-50%, -50%);
-  filter: sepia(0%);
-}
-.slyde.active article {
-  opacity: 1;
-}
-
-.slyde:nth-child(3) {
-  z-index: 8;
-  transform: rotate(0deg) translate(-50%, -50%);
-}
-.slyde:nth-child(3):before {
-  content: "3";
-}
-.slyde:nth-child(3).leave {
-  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(0deg) translate(-50%, -15rem);
-  opacity: 0;
-  pointer-events: none;
-  filter: sepia(0%);
-}
-.slyde.active {
-  transform: rotate(0) translate(-50%, -50%);
-  filter: sepia(0%);
-}
-.slyde.active article {
-  opacity: 1;
-}
-
-.slyde:nth-child(4) {
-  z-index: 7;
-  transform: rotate(-1deg) translate(-50%, -50%);
-}
-.slyde:nth-child(4):before {
-  content: "4";
-}
-.slyde:nth-child(4).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
   transform: rotate(-1deg) translate(-50%, -15rem);
   opacity: 0;
@@ -12162,16 +12118,60 @@ Copyright (c) 2015 Daniel Eden
   opacity: 1;
 }
 
+.slyde:nth-child(3) {
+  z-index: 8;
+  transform: rotate(-3deg) translate(-50%, -50%);
+}
+.slyde:nth-child(3):before {
+  content: "3";
+}
+.slyde:nth-child(3).leave {
+  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
+  transform: rotate(-3deg) translate(-50%, -15rem);
+  opacity: 0;
+  pointer-events: none;
+  filter: sepia(0%);
+}
+.slyde.active {
+  transform: rotate(0) translate(-50%, -50%);
+  filter: sepia(0%);
+}
+.slyde.active article {
+  opacity: 1;
+}
+
+.slyde:nth-child(4) {
+  z-index: 7;
+  transform: rotate(1deg) translate(-50%, -50%);
+}
+.slyde:nth-child(4):before {
+  content: "4";
+}
+.slyde:nth-child(4).leave {
+  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
+  transform: rotate(1deg) translate(-50%, -15rem);
+  opacity: 0;
+  pointer-events: none;
+  filter: sepia(0%);
+}
+.slyde.active {
+  transform: rotate(0) translate(-50%, -50%);
+  filter: sepia(0%);
+}
+.slyde.active article {
+  opacity: 1;
+}
+
 .slyde:nth-child(5) {
   z-index: 6;
-  transform: rotate(-4deg) translate(-50%, -50%);
+  transform: rotate(-1deg) translate(-50%, -50%);
 }
 .slyde:nth-child(5):before {
   content: "5";
 }
 .slyde:nth-child(5).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-4deg) translate(-50%, -15rem);
+  transform: rotate(-1deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -12208,14 +12208,14 @@ Copyright (c) 2015 Daniel Eden
 
 .slyde:nth-child(7) {
   z-index: 4;
-  transform: rotate(-2deg) translate(-50%, -50%);
+  transform: rotate(-4deg) translate(-50%, -50%);
 }
 .slyde:nth-child(7):before {
   content: "7";
 }
 .slyde:nth-child(7).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-2deg) translate(-50%, -15rem);
+  transform: rotate(-4deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -12230,14 +12230,14 @@ Copyright (c) 2015 Daniel Eden
 
 .slyde:nth-child(8) {
   z-index: 3;
-  transform: rotate(-3deg) translate(-50%, -50%);
+  transform: rotate(-1deg) translate(-50%, -50%);
 }
 .slyde:nth-child(8):before {
   content: "8";
 }
 .slyde:nth-child(8).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-3deg) translate(-50%, -15rem);
+  transform: rotate(-1deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -12252,14 +12252,14 @@ Copyright (c) 2015 Daniel Eden
 
 .slyde:nth-child(9) {
   z-index: 2;
-  transform: rotate(1deg) translate(-50%, -50%);
+  transform: rotate(2deg) translate(-50%, -50%);
 }
 .slyde:nth-child(9):before {
   content: "9";
 }
 .slyde:nth-child(9).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(1deg) translate(-50%, -15rem);
+  transform: rotate(2deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -12274,14 +12274,14 @@ Copyright (c) 2015 Daniel Eden
 
 .slyde:nth-child(10) {
   z-index: 1;
-  transform: rotate(0deg) translate(-50%, -50%);
+  transform: rotate(1deg) translate(-50%, -50%);
 }
 .slyde:nth-child(10):before {
   content: "10";
 }
 .slyde:nth-child(10).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(0deg) translate(-50%, -15rem);
+  transform: rotate(1deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -15174,14 +15174,14 @@ section.calendar-section .container #calendar .fc-view-harness .fc-daygrid table
   border: none;
 }
 .modal .modal-dialog .modal-content .modal-footer .btn.modal-attachment {
-  border: 1.5px solid #e76024;
+  border: 1.5px solid #002d25;
   background-color: transparent;
-  color: #e76024;
+  color: #002d25;
 }
 .modal .modal-dialog .modal-content .modal-footer .btn.modal-attachment:hover {
   color: white;
-  background-color: #e76024;
-  border-color: #e76024;
+  background-color: #005e51;
+  border-color: #005e51;
 }
 
 .fc-monthList-view {
@@ -15263,6 +15263,7 @@ section.calendar-section .container #calendar .fc-view-harness .fc-daygrid table
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1.5px solid #002d25;
   border-radius: 99px;
   background-color: #002d25;
   text-decoration: none;
@@ -15286,16 +15287,17 @@ section.calendar-section .container #calendar .fc-view-harness .fc-daygrid table
 .fc-monthList-view .events-list-wrapper .event-list-item .event-list-footer .event-list-flyer-btn:hover,
 .fc-monthList-view .events-list-wrapper .event-list-item .event-list-footer .event-list-link-btn:hover {
   background-color: #005e51;
+  border-color: #005e51;
 }
 .fc-monthList-view .events-list-wrapper .event-list-item .event-list-footer .event-list-flyer-btn {
-  border: 1.5px solid #e76024;
+  border: 1.5px solid #002d25;
   background-color: white;
-  color: #e76024;
+  color: #002d25;
 }
 .fc-monthList-view .events-list-wrapper .event-list-item .event-list-footer .event-list-flyer-btn:hover {
   color: white;
-  background-color: #e76024;
-  border-color: #e76024;
+  background-color: #005e51;
+  border-color: #005e51;
 }
 .fc-monthList-view .events-list-wrapper .event-list-item .event-list-footer.no-buttons {
   padding: 0;
@@ -15472,37 +15474,49 @@ section.hours-table .container .row [class*=col] .events-list-container #events-
   white-space: pre-line;
   padding-top: 0;
 }
-section.hours-table .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .register-button, section.course-policies .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .register-button, section.scorecard .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .register-button {
+section.hours-table .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home, section.course-policies .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home, section.scorecard .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home {
+  margin-top: 1.5rem;
+}
+section.hours-table .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home .register-button,
+section.hours-table .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home .flyer-button, section.course-policies .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home .register-button,
+section.course-policies .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home .flyer-button, section.scorecard .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home .register-button,
+section.scorecard .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home .flyer-button {
   bottom: 0.5rem;
   right: 3rem;
-  background-color: black;
+  background-color: #002d25;
   text-decoration: none;
+  border: none;
   transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  padding: 6px 12px 6px 14px;
+  padding: 6px 14px 6px 14px;
   box-shadow: none;
   color: white;
 }
-section.hours-table .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .register-button .button-text, section.course-policies .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .register-button .button-text, section.scorecard .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .register-button .button-text {
+section.hours-table .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home .register-button .button-text,
+section.hours-table .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home .flyer-button .button-text, section.course-policies .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home .register-button .button-text,
+section.course-policies .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home .flyer-button .button-text, section.scorecard .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home .register-button .button-text,
+section.scorecard .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home .flyer-button .button-text {
   transition: color 0.15s ease;
   color: white;
 }
-section.hours-table .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .register-button .kinked-arrow, section.course-policies .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .register-button .kinked-arrow, section.scorecard .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .register-button .kinked-arrow {
-  position: relative;
-  padding-left: 5px;
-  top: 2px;
-  color: rgba(255, 255, 255, 0.8);
+section.hours-table .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home .register-button:hover,
+section.hours-table .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home .flyer-button:hover, section.course-policies .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home .register-button:hover,
+section.course-policies .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home .flyer-button:hover, section.scorecard .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home .register-button:hover,
+section.scorecard .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home .flyer-button:hover {
+  background-color: #005e51;
 }
-section.hours-table .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .register-button:hover, section.course-policies .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .register-button:hover, section.scorecard .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .register-button:hover {
-  color: rgba(255, 255, 255, 0.8);
+section.hours-table .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home .flyer-button, section.course-policies .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home .flyer-button, section.scorecard .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home .flyer-button {
+  color: #002d25;
+  padding: 4.5px 12.5px 4.5px 12.5px;
+  border: 1.5px solid #002d25;
+  background-color: transparent;
+}
+section.hours-table .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home .flyer-button:hover, section.course-policies .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home .flyer-button:hover, section.scorecard .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-footer-home .flyer-button:hover {
+  color: white;
+  border-color: #005e51;
+  background-color: #005e51;
 }
 section.hours-table .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item:hover, section.course-policies .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item:hover, section.scorecard .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item:hover {
   box-shadow: 0 0 0 1.25px rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05) 0px 10px 15px -3px, rgba(0, 0, 0, 0.025) 0px 4px 6px -2px;
-}
-section.hours-table .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item.includes-register-button .event-content-row .content-side, section.course-policies .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item.includes-register-button .event-content-row .content-side, section.scorecard .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item.includes-register-button .event-content-row .content-side {
-  padding-bottom: 1.4rem;
-}
-section.hours-table .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item.includes-register-button .event-content-row .content-side .register-button, section.course-policies .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item.includes-register-button .event-content-row .content-side .register-button, section.scorecard .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item.includes-register-button .event-content-row .content-side .register-button {
-  margin-top: 1.5rem;
 }
 section.hours-table .container .row [class*=col] .events-list-container .all-events-link, section.course-policies .container .row [class*=col] .events-list-container .all-events-link, section.scorecard .container .row [class*=col] .events-list-container .all-events-link {
   display: inline-block;
@@ -15595,7 +15609,7 @@ section.hours-table .flair, section.course-policies .flair, section.scorecard .f
   height: auto;
 }
 section.hours-table .flair path, section.course-policies .flair path, section.scorecard .flair path {
-  fill: white;
+  fill: #002d25;
 }
 section.hours-table .flair:nth-of-type(1), section.course-policies .flair:nth-of-type(1), section.scorecard .flair:nth-of-type(1) {
   top: 10px;

@@ -152,7 +152,11 @@ export class Footer extends LitElement {
                 </a>
               </div>
               <div class="col-12 col-lg-4 text-center">
-                <a class="link-to-studio no-underline" href="javscript:void(0)">
+                <a
+                  class="link-to-studio no-underline"
+                  href="https://sylvan-heights.sanity.studio/structure"
+                  target="_blank"
+                >
                   © Sylvan Heights Golf Course | ${new Date().getFullYear()}
                 </a>
               </div>

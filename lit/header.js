@@ -23,6 +23,9 @@ export class Header extends LitElement {
                     <li>
                       <a class="nav-link" href="course.html">Course</a>
                     </li>
+                    <li>
+                      <a class="nav-link" href="events.html">Events</a>
+                    </li>
                   </ul>
                 </nav>
               </div>

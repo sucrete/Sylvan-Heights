@@ -1,6 +1,6 @@
 //* This is for the Calendar (or "Events") page
 const calendarQuery =
-  "https://s52wtqv4.api.sanity.io/v2025-12-18/data/query/production?query=%7B%0A++%22events%22%3A+*%5B_type+%3D%3D+%22event%22%5D%2C%0A++%22images%22%3A+*%5B_type+%3D%3D+%22sanity.imageAsset%22%5D%0A%7D&perspective=published";
+  "https://0yddk171.api.sanity.io/v2026-03-03/data/query/production?query=%7B%0A++%22events%22%3A+*%5B_type+%3D%3D+%22event%22%5D%2C%0A++%22images%22%3A+*%5B_type+%3D%3D+%22sanity.imageAsset%22%5D%0A%7D&perspective=published";
 
 document.addEventListener("DOMContentLoaded", function () {
   var cal = document.getElementById("calendar");
