@@ -602,7 +602,6 @@ section {
                       rgba(0, 0, 0, 0.025) 0px 4px 6px -2px;
                     // box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 15px -3px, rgba(0, 0, 0, 0.025) 0px 4px 6px -2px;
                   }
-              
                 }
               }
             }
@@ -706,7 +705,6 @@ section {
     }
     .flair {
       position: absolute;
-
       width: 25px;
       height: auto;
       path {
@@ -826,6 +824,9 @@ section {
           }
         }
       }
+      .flair {
+        width: 21px;
+      }
     }
 
     &.calendar-section {
@@ -910,20 +911,28 @@ section {
                             .content-side {
                               border: none;
                               padding: 1rem 1.25rem 1.5rem 1rem;
-
+                              .event-list-title {
+                                padding-bottom: 0.5rem;
+                              }
                               .event-list-date-mobile-wrapper {
                                 display: flex;
                                 font-size: 15px;
                                 color: grey;
+                                padding-bottom: 0.5rem;
                                 .date-icon {
                                   width: 12.5px;
                                   height: auto;
                                   margin-right: 7px;
-                                  margin-top: -2px;
+                                  margin-top: 2px;
                                 }
                               }
                               .event-list-description {
                                 @include mobile-text-body();
+                              }
+                              .event-list-footer-home {
+                                [class*='button'] {
+                                  font-size: 12px;
+                                }
                               }
                             }
                           }
@@ -955,19 +964,21 @@ section {
         }
       }
     }
-    &.scorecard#scorecard {
-      padding-top: 7rem;
-      padding-bottom: 8rem;
-      & > * {
-        padding-left: 0;
-        padding-right: 0;
-      }
-      .container {
-        .row {
-          [class*="col"] {
-            padding: 0 7px;
-            .scorecard-link {
-              border-radius: 13px;
+    &.scorecard {
+      &#scorecard {
+        padding-top: 7rem;
+        padding-bottom: 8rem;
+        & > * {
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .container {
+          .row {
+            [class*="col"] {
+              padding: 0 7px;
+              .scorecard-link {
+                border-radius: 13px;
+              }
             }
           }
         }
