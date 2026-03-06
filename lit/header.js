@@ -82,12 +82,12 @@ export class Header extends LitElement {
                       </a>
                       <ul class="submenu parent-nav with-border">
                         <li>
-                          <a href="host-an-event.html">
+                          <a href="book-an-event.html">
                             <img
                               src="/assets/images/icons/sackers-chevron.svg"
                               class="injectable chevron"
                               alt=""
-                            /><span class="text">Host An Event</span></a
+                            /><span class="text">Book An Event</span></a
                           >
                         </li>
                         <li>
