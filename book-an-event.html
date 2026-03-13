@@ -114,7 +114,7 @@
                 </div>
               </div>
               <div class="col-lg-12">
-                <form class="contact-form" id="contact-form">
+                <form class="contact-form" id="book-event-form">
                   <div class="message-sent-box">
                     <div class="row text-center flex-column align-items-center">
                       <div class="image-orb">
@@ -134,7 +134,7 @@
                         <input
                           type="text"
                           id="name"
-                          name="first_name"
+                          name="full_name"
                           placeholder=""
                           required
                         />
@@ -153,18 +153,18 @@
                     <div class="single">
                       <label for="phone">Phone</label>
                       <input
-                        type="text"
+                        type="tel"
                         id="phone"
                         name="phone"
                         placeholder=""
                       />
                     </div>
                     <div class="single">
-                      <label for="message" class="mb-0">Event Details</label>
+                      <label for="event-details" class="mb-0">Event Details</label>
                       <div class="monospaced">Please, let us know the number of people, date, length of event, and whatever else might help!</div>
                       <textarea
-                        id="message"
-                        name="message"
+                        id="event-details"
+                        name="event_details"
                         placeholder=""
                         required
                       ></textarea>
@@ -300,5 +300,15 @@
 
     <script defer src="assets/js/main.js"></script>
     <script src="./assets/js/weather.js "></script>
+        <!-- form handlers -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script
+      defer
+      type="text/javascript"
+      src="./assets/js/host-an-event-form-util.js "
+    ></script>
   </body>
 </html>
