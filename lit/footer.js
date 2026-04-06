@@ -18,7 +18,8 @@ export class Footer extends LitElement {
                 <div class="row pt-lg-2">
                   <div class="col-12 col-lg-5">
                     <div class="sitemap-container">
-                      <div class="sitemap-label">pages</div>
+                      <div class="sitemap-label" id="footer-nav-label">pages</div>
+                      <nav aria-labelledby="footer-nav-label">
                       <ul>
                         <li><a href="/rates.html">rates</a></li>
                         <li><a href="/passes.html">passes</a></li>
@@ -29,6 +30,7 @@ export class Footer extends LitElement {
                         <li><a href="/guidelines.html">guidelines</a></li>
                         <li><a href="/book-tee-time.html">book tee time</a></li>
                       </ul>
+                      </nav>
                     </div>
                   </div>
                   <div class="col-12 col-lg-6 details-col">
@@ -56,16 +58,16 @@ export class Footer extends LitElement {
               <div class="col-12 col-md-4 logo-column text-center">
                 <!-- <img src="./assets/images/svgs/decorative-line.svg" alt="" class="decorative-line" />
                 <img src="./assets/images/svgs/decorative-line.svg" alt="" class="decorative-line" /> -->
-                <a href="/index.html" class="cornered-box">
+                <a href="/index.html" class="cornered-box" aria-label="Sylvan Heights Golf Course — home">
                   <img
                     src="./assets/images/logo/footer-logo.svg"
                     class="footer-logo"
-                    alt=""
+                    alt="Sylvan Heights Golf Course"
                 /></a>
               </div>
               <div class="col-12 col-md-4 flex-column d-flex weather-column">
                 <!-- ⚜️⚜️⚜️⚜️⚜️ WEATHER BOX STARTS HERE ⚜️⚜️⚜️⚜️⚜️ -->
-                <div class="weather-box">
+                <div class="weather-box" role="region" aria-label="Local weather forecast">
                   <!-- TODAY WEATHER ROW START -->
                   <div class="row today-weather-row align-items-center">
                     <div class="col text-left weather today-weather">
@@ -140,14 +142,18 @@ export class Footer extends LitElement {
                   href="https://www.facebook.com/pages/Sylvan%20Heights%20Golf%20Course/220493794629923/"
                   class="facebook-reveal"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Sylvan Heights Golf Course on Facebook (opens in new tab)"
                 >
                   <img
                     src="assets/images/svgs/f.svg"
                     alt=""
+                    aria-hidden="true"
                     class="f injectable"
                   /><img
                     src="assets/images/svgs/acebook.svg"
                     alt=""
+                    aria-hidden="true"
                     class="acebook injectable"
                   />
                 </a>
@@ -163,7 +169,7 @@ export class Footer extends LitElement {
               </div>
 
               <div class="col-12 col-lg-4">
-                <a class="teequest-link no-underline" href="javscript:void(0)">
+                <a class="teequest-link no-underline" href="javascript:void(0)" aria-label="Powered by TeeQuest">
                   <svg
                     class="svg-inline--fa fa-gears"
                     aria-hidden="true"

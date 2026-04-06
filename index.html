@@ -72,6 +72,7 @@
   </head>
 
   <body style="position: relative">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- Facebook SDK start -->
     <div id="fb-root"></div>
     <script
@@ -90,6 +91,7 @@
     </header>
     <!-- header area end -->
 
+    <main id="main-content">
     <!-- rts banner four start -->
     <div
       class="banner banner-four-area banner-four-bg rts-section-gap jarallax home-page"
@@ -131,10 +133,13 @@
           href="https://www.facebook.com/pages/Sylvan%20Heights%20Golf%20Course/220493794629923/"
           class="facebook-reveal"
           target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Sylvan Heights Golf Course on Facebook (opens in new tab)"
         >
-          <img src="assets/images/svgs/f.svg" alt="" class="f injectable" /><img
+          <img src="assets/images/svgs/f.svg" alt="" aria-hidden="true" class="f injectable" /><img
             src="assets/images/svgs/acebook.svg"
             alt=""
+            aria-hidden="true"
             class="acebook injectable"
           />
         </a>
@@ -275,6 +280,7 @@
                 src="assets/images/icons/hiring.svg"
                 class="injectable"
                 alt=""
+                aria-hidden="true"
               />
               <p>
                 <b>Now Hiring.</b> Pro shop & golf course grounds
@@ -358,10 +364,10 @@
 
     <!-- events section -->
     <section class="hours-table">
-      <img src="assets/images/decorative/flair.svg" alt="" class="flair injectable">
-      <img src="assets/images/decorative/flair.svg" alt="" class="flair injectable">
-      <img src="assets/images/decorative/flair.svg" alt="" class="flair injectable">
-      <img src="assets/images/decorative/flair.svg" alt="" class="flair injectable">
+      <img src="assets/images/decorative/flair.svg" alt="" aria-hidden="true" class="flair injectable">
+      <img src="assets/images/decorative/flair.svg" alt="" aria-hidden="true" class="flair injectable">
+      <img src="assets/images/decorative/flair.svg" alt="" aria-hidden="true" class="flair injectable">
+      <img src="assets/images/decorative/flair.svg" alt="" aria-hidden="true" class="flair injectable">
       <div class="container">
         <div class="row g-5">
           <div class="col-12 col-md-4 pt-3">
@@ -475,6 +481,7 @@
       </div>
     </section>
     <!-- events section end -->
+    </main>
 
     <footer>
       <my-footer></my-footer>
@@ -487,8 +494,8 @@
     </div>
 
     <!-- 🟡🟡🟡🟡🟡🟡 MOBILE MENU MARKUP START 🟡🟡🟡🟡🟡🟡 -->
-    <div id="side-bar" class="side-bar header-two" dir="ltr">
-      <button class="close-icon-menu" aria-label="footer_Button">
+    <div id="side-bar" class="side-bar header-two" dir="ltr" role="dialog" aria-modal="true" aria-label="Navigation menu">
+      <button class="close-icon-menu" aria-label="Close navigation menu">
         <svg
           class="side-menu-cross"
           id="Layer_1"
@@ -543,6 +550,7 @@
                   class="injectable"
                   src="assets/images/icons/14.svg"
                   alt=""
+                  aria-hidden="true"
                 />
               </a>
             </li>

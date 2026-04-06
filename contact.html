@@ -59,6 +59,7 @@
   </head>
 
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- header area start -->
     <header class="header-area-four header--sticky style-white">
       <my-header> </my-header>
@@ -84,6 +85,7 @@
     </div>
     <!-- rts banner four end -->
 
+    <main id="main-content">
     <section class="contact-page-body">
       <div class="container">
         <div
@@ -140,6 +142,7 @@
                   allowfullscreen=""
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
+                  title="Sylvan Heights Golf Course location on Google Maps"
                 ></iframe>
                 <h5>
                   2661 Ellwood Road<br />
@@ -165,6 +168,7 @@
                     src="assets/images/icons/speech-bubble-yellow.svg"
                     class="injectable"
                     alt=""
+                    aria-hidden="true"
                   />get in touch
                 </div>
                 <h3 class="italicized">We’d love to hear<br />from you!</h3>
@@ -243,6 +247,7 @@
         </div>
       </div>
     </section>
+    </main>
 
     <!-- <section class="hours-table" id="instruction">
       <div class="container">
@@ -294,8 +299,8 @@
     </div>
 
     <!-- progress area start -->
-    <div class="progress-wrap">
-      <img class="up-arrow" src="assets/images/icons/up-arrow.svg" alt="" />
+    <div class="progress-wrap" role="button" aria-label="Scroll to top" tabindex="0">
+      <img class="up-arrow" src="assets/images/icons/up-arrow.svg" alt="" aria-hidden="true" />
       <svg
         class="progress-circle svg-content"
         width="100%"
@@ -315,8 +320,8 @@
     <!-- progress area end -->
 
     <!-- 🟡🟡🟡🟡🟡🟡 MOBILE MENU MARKUP START 🟡🟡🟡🟡🟡🟡 -->
-    <div id="side-bar" class="side-bar header-two" dir="ltr">
-      <button class="close-icon-menu" aria-label="footer_Button">
+    <div id="side-bar" class="side-bar header-two" dir="ltr" role="dialog" aria-modal="true" aria-label="Navigation menu">
+      <button class="close-icon-menu" aria-label="Close navigation menu">
         <svg
           class="side-menu-cross"
           id="Layer_1"

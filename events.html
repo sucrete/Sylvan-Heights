@@ -4,7 +4,7 @@
     <title>Calendar of Events | Sylvan Heights Golf Course</title>
     <meta
       name="description"
-      content="Take a look at the events going down at Beech Creek Golf Club!"
+      content="View the calendar of upcoming events at Sylvan Heights Golf Course in New Castle, PA."
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -74,6 +74,7 @@
   </head>
 
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- header area start -->
     <header class="header-area-four header--sticky style-white">
       <my-header> </my-header>
@@ -99,6 +100,7 @@
     </div>
     <!-- rts banner four end -->
 
+    <main id="main-content">
     <section class="calendar-section">
       <div class="container mt-3 mt-lg-10">
         <!-- Modal -->
@@ -113,12 +115,10 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h3 class="modal-title" id="exampleModalLabel">Modal title</h3>
-                <button class="close-button-wrapper" data-bs-dismiss="modal">
+                <button class="close-button-wrapper" data-bs-dismiss="modal" aria-label="Close event details">
                   <div
-                    type="div"
                     class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
+                    aria-hidden="true"
                   ></div>
                 </button>
               </div>
@@ -129,6 +129,7 @@
                     src="assets/images/icons/calendar-2.svg"
                     class="date-icon"
                     alt=""
+                    aria-hidden="true"
                   /><span class="modal-date"></span
                   ><span class="modal-date-end"></span>
                 </div>
@@ -161,6 +162,7 @@
       </div>
     </section>
     <!-- calendar section end -->
+    </main>
 
     <footer>
       <my-footer></my-footer>
@@ -173,8 +175,8 @@
     </div>
 
     <!-- progress area start -->
-    <div class="progress-wrap">
-      <img class="up-arrow" src="assets/images/icons/up-arrow.svg" alt="" />
+    <div class="progress-wrap" role="button" aria-label="Scroll to top" tabindex="0">
+      <img class="up-arrow" src="assets/images/icons/up-arrow.svg" alt="" aria-hidden="true" />
       <svg
         class="progress-circle svg-content"
         width="100%"
@@ -194,8 +196,8 @@
     <!-- progress area end -->
 
     <!-- 🟡🟡🟡🟡🟡🟡 MOBILE MENU MARKUP START 🟡🟡🟡🟡🟡🟡 -->
-    <div id="side-bar" class="side-bar header-two" dir="ltr">
-      <button class="close-icon-menu" aria-label="footer_Button">
+    <div id="side-bar" class="side-bar header-two" dir="ltr" role="dialog" aria-modal="true" aria-label="Navigation menu">
+      <button class="close-icon-menu" aria-label="Close navigation menu">
         <svg
           class="side-menu-cross"
           id="Layer_1"

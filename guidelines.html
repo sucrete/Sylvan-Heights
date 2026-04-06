@@ -4,7 +4,7 @@
     <title>Guidelines | Sylvan Heights Golf Course</title>
     <meta
       name="description"
-      content="Take a look at the events going down at Beech Creek Golf Club!"
+      content="Golf course guidelines, season pass rules, and private cart policies for Sylvan Heights Golf Course."
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -74,6 +74,7 @@
   </head>
 
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- header area start -->
     <header class="header-area-four header--sticky style-white">
       <my-header> </my-header>
@@ -99,11 +100,11 @@
     </div>
     <!-- rts banner four end -->
 
-    <main class="guidelines-page-body">
+    <main id="main-content" class="guidelines-page-body">
       <div class="container">
         <div class="row g-4 g-md-5">
           <div class="col-12 col-md-4">
-            <a href="assets/pdfs/Season-Pass-Guidelines.pdf" target="_blank">
+            <a href="assets/pdfs/Season-Pass-Guidelines.pdf" target="_blank" aria-label="Season Pass Guidelines (PDF, opens in new tab)">
               <div
                 class="card wow fadeInUp"
                 data-wow-offset="120"
@@ -121,6 +122,7 @@
                   <img
                     src="assets/images/logo/sh-monogram-white.svg"
                     alt=""
+                    aria-hidden="true"
                     class="sh-icon injectable z-3"
                   />
                   <div class="title-bar position-relative z-3">
@@ -132,6 +134,7 @@
                       <img
                         src="assets/images/icons/simple-arrow.svg"
                         alt=""
+                        aria-hidden="true"
                         class="simple-arrow injectable"
                       />
                     </div>
@@ -144,7 +147,7 @@
             </a>
           </div>
           <div class="col-12 col-md-4">
-            <a href="/assets/pdfs/Season-Pass-Agreement.pdf" target="_blank">
+            <a href="/assets/pdfs/Season-Pass-Agreement.pdf" target="_blank" aria-label="Season Pass Agreement (PDF, opens in new tab)">
               <div
                 class="card wow fadeInUp"
                 data-wow-offset="120"
@@ -162,6 +165,7 @@
                   <img
                     src="assets/images/logo/sh-monogram-white.svg"
                     alt=""
+                    aria-hidden="true"
                     class="sh-icon injectable z-3"
                   />
                   <div class="title-bar position-relative z-3">
@@ -173,6 +177,7 @@
                       <img
                         src="assets/images/icons/simple-arrow.svg"
                         alt=""
+                        aria-hidden="true"
                         class="simple-arrow injectable"
                       />
                     </div>
@@ -183,7 +188,7 @@
             </a>
           </div>
           <div class="col-12 col-md-4">
-            <a href="assets/pdfs/Golf-Cart-Guidelines.pdf" target="_blank">
+            <a href="assets/pdfs/Golf-Cart-Guidelines.pdf" target="_blank" aria-label="Private Cart Guidelines (PDF, opens in new tab)">
               <div
                 class="card wow fadeInUp"
                 data-wow-offset="120"
@@ -201,6 +206,7 @@
                   <img
                     src="assets/images/logo/sh-monogram-white.svg"
                     alt=""
+                    aria-hidden="true"
                     class="sh-icon injectable z-3"
                   />
                   <div class="title-bar position-relative z-3">
@@ -212,6 +218,7 @@
                       <img
                         src="assets/images/icons/simple-arrow.svg"
                         alt=""
+                        aria-hidden="true"
                         class="simple-arrow injectable"
                       />
                     </div>
@@ -239,8 +246,8 @@
     </div>
 
     <!-- progress area start -->
-    <div class="progress-wrap">
-      <img class="up-arrow" src="assets/images/icons/up-arrow.svg" alt="" />
+    <div class="progress-wrap" role="button" aria-label="Scroll to top" tabindex="0">
+      <img class="up-arrow" src="assets/images/icons/up-arrow.svg" alt="" aria-hidden="true" />
       <svg
         class="progress-circle svg-content"
         width="100%"
@@ -260,8 +267,8 @@
     <!-- progress area end -->
 
     <!-- 🟡🟡🟡🟡🟡🟡 MOBILE MENU MARKUP START 🟡🟡🟡🟡🟡🟡 -->
-    <div id="side-bar" class="side-bar header-two" dir="ltr">
-      <button class="close-icon-menu" aria-label="footer_Button">
+    <div id="side-bar" class="side-bar header-two" dir="ltr" role="dialog" aria-modal="true" aria-label="Navigation menu">
+      <button class="close-icon-menu" aria-label="Close navigation menu">
         <svg
           class="side-menu-cross"
           id="Layer_1"

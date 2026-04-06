@@ -2521,3 +2521,47 @@ section.perks {
     }
   }
 }
+
+// ===== ADA ACCESSIBILITY =====
+
+// Skip to main content link
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 6px;
+  z-index: 99999;
+  padding: 10px 20px;
+  background: var(--color-primary);
+  color: #fff !important;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 6px 6px;
+  transition: top 0.15s ease;
+
+  &:focus {
+    top: 0;
+    outline: 3px solid var(--color-secondary) !important;
+    outline-offset: 2px;
+    color: #fff !important;
+  }
+}
+
+// Visible focus indicators for keyboard navigation (keyboard only, not mouse clicks)
+a,
+button,
+input,
+select,
+textarea,
+[tabindex="0"] {
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--color-secondary) !important;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+

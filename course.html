@@ -66,6 +66,7 @@
   </head>
 
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- header area start -->
     <header class="header-area-four header--sticky style-white">
       <my-header> </my-header>
@@ -91,6 +92,7 @@
     </div>
     <!-- banner end -->
 
+    <main id="main-content">
     <section class="course-page-body mobile-padding">
       <div class="container">
         <!-- <div class="notices-wrapper">
@@ -131,6 +133,7 @@
                         <img
                           src="assets/images/icons/fleur-de-lis.svg"
                           alt=""
+                          aria-hidden="true"
                           class="fdl injectable"
                         />
                         <h3>Hole <span x-text="hole.hole">1</span></h3>
@@ -161,7 +164,7 @@
                       </div>
                       <div class="col-12 col-md-6 pic-side">
                         <div class="course-image-container">
-                          <img :src="hole.pictureURL" alt="" />
+                          <img :src="hole.pictureURL" :alt="`Hole ${hole.hole} at Sylvan Heights Golf Course — Par ${hole.par}`" />
                         </div>
                       </div>
                     </div>
@@ -271,6 +274,7 @@
         </div>
       </div>
     </section>
+    </main>
 
     <footer>
       <my-footer></my-footer>
@@ -283,8 +287,8 @@
     </div>
 
     <!-- progress area start -->
-    <div class="progress-wrap">
-      <img class="up-arrow" src="assets/images/icons/up-arrow.svg" alt="" />
+    <div class="progress-wrap" role="button" aria-label="Scroll to top" tabindex="0">
+      <img class="up-arrow" src="assets/images/icons/up-arrow.svg" alt="" aria-hidden="true" />
       <svg
         class="progress-circle svg-content"
         width="100%"
@@ -304,8 +308,8 @@
     <!-- progress area end -->
 
     <!-- 🟡🟡🟡🟡🟡🟡 MOBILE MENU MARKUP START 🟡🟡🟡🟡🟡🟡 -->
-    <div id="side-bar" class="side-bar header-two" dir="ltr">
-      <button class="close-icon-menu" aria-label="footer_Button">
+    <div id="side-bar" class="side-bar header-two" dir="ltr" role="dialog" aria-modal="true" aria-label="Navigation menu">
+      <button class="close-icon-menu" aria-label="Close navigation menu">
         <svg
           class="side-menu-cross"
           id="Layer_1"
