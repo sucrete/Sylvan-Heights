@@ -2565,3 +2565,119 @@ textarea,
   }
 }
 
+
+// promotional pop-up (home page) — same modal behavior as MariMack's,
+// but built from a frosted-glass card (masked by mask.svg) with content.svg on top
+.promo-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: rgba(0, 0, 0, 0.25); // scrim
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  &[hidden] {
+    display: none;
+  }
+  // the dialog itself takes focus on open (so the X doesn't show a focus ring
+  // until a keyboard user actually tabs to it)
+  &:focus {
+    outline: none;
+  }
+  &__frame {
+    position: relative;
+    // 500px wide on desktop, sized to the mask (500 x 468.42 viewBox); shrinks on
+    // small screens (or short viewports) while keeping the mask's aspect ratio
+    width: min(500px, calc(100vw - 64px), calc((100vh - 64px) * 500 / 468.42));
+    width: min(500px, calc(100vw - 64px), calc((100dvh - 64px) * 500 / 468.42));
+    aspect-ratio: 500 / 468.42;
+    line-height: 0;
+    opacity: 0;
+    transform: scale(0.8);
+    transition:
+      opacity 0.45s ease,
+      transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  // added by JS one frame after un-hiding, so the transitions run
+  &.is-visible {
+    opacity: 1;
+    .promo-popup__frame {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    &__frame {
+      transform: none;
+    }
+  }
+  // frosted card: only the mask's shape is used (its green fill is ignored)
+  &__glass {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.65);
+    -webkit-backdrop-filter: blur(21px);
+    backdrop-filter: blur(21px);
+    -webkit-mask: url("../assets/images/decorative/mask.svg") center / contain no-repeat;
+    mask: url("../assets/images/decorative/mask.svg") center / contain no-repeat;
+  }
+  &__content {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+  &__close {
+    position: absolute;
+    // sits inside the card's top-right corner, clear of the mask's corner notch
+    top: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // fixed, equal width/height = a perfect circle (18px icon + 10px padding each side).
+    // Overrides the theme's global button styles (width: 100%, max-width, line-height).
+    box-sizing: border-box;
+    width: 38px;
+    height: 38px;
+    min-width: 0;
+    min-height: 0;
+    max-width: none;
+    flex: none;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    svg {
+      display: block;
+      flex: none;
+      width: 18px;
+      height: 18px;
+      stroke: black;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      fill: none;
+    }
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+    // keep it round: the site's global button:focus-visible rule sets border-radius: 2px
+    &:focus-visible {
+      border-radius: 50%;
+      outline-offset: 2px;
+    }
+  }
+}
+body.promo-popup-open {
+  overflow: hidden;
+}

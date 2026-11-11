@@ -560,6 +560,38 @@
     </div>
     <!-- 🟡🟡🟡🟡🟡🟡 MOBILE MENU MARKUP END 🟡🟡🟡🟡🟡🟡 -->
 
+    <!-- promotional pop-up (content comes from content.svg; see assets/js/promo-popup.js) -->
+    <div
+      class="promo-popup"
+      id="promo-popup"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Pro Shop deals"
+      tabindex="-1"
+      hidden
+    >
+      <div class="promo-popup__frame">
+        <div class="promo-popup__glass" aria-hidden="true"></div>
+        <img
+          class="promo-popup__content"
+          src="assets/images/decorative/content.svg"
+          alt="Pro Shop Deals: 1/2 off all golf shirts in stock. 1/2 off select Bridgestone golf balls. While supplies last!"
+          width="500"
+          height="468"
+        />
+        <button
+          type="button"
+          class="promo-popup__close"
+          aria-label="Close promotion"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- promotional pop-up end -->
+
     <script defer src="assets/js/plugins/jquery.js"></script>
     <script defer src="assets/js/vendor/waw.js"></script>
     <script defer src="assets/js/vendor/jarallax.js"></script>
@@ -568,6 +600,7 @@
     <script defer src="assets/js/vendor/bootstrap.min.js"></script>
     <script defer src="assets/js/main.js"></script>
     <script src="./assets/js/weather.js "></script>
+    <script src="assets/js/promo-popup.js"></script>
 
     <!-- <script type="module" src="./assets/js/embla.js"></script> -->
 
