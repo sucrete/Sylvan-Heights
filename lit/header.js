@@ -1,12 +1,31 @@
 import { LitElement, html } from "../../assets/js/vendor/lit.js";
 
+// Winter-rates notification bar (hardcoded, not connected to Sanity).
+// Shown from Nov 1 through Mar 31. The years roll over automatically:
+// on Nov 1 the season becomes "this year - next year", and from Jan 1
+// through Mar 31 it stays "last year - this year".
+function getWinterRatesNotice(now = new Date()) {
+  const month = now.getMonth(); // 0 = Jan ... 10 = Nov, 11 = Dec
+  const inSeason = month >= 10 || month <= 2;
+  if (!inSeason) return null;
+  const startYear = month >= 10 ? now.getFullYear() : now.getFullYear() - 1;
+  const endYear = startYear + 1;
+  return `Winter rates are effective from December 1st, ${startYear} - March 31st, ${endYear}`;
+}
+
 export class Header extends LitElement {
   createRenderRoot() {
     return this;
   }
 
   render() {
+    const notice = getWinterRatesNotice();
     return html`
+      ${notice
+        ? html`<div class="notification-bar" role="region" aria-label="Site notice">
+            <p class="notification-bar__text">${notice}</p>
+          </div>`
+        : ""}
       <div class="container">
         <div class="row">
           <div class="col-lg-12">

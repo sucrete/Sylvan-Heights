@@ -268,6 +268,7 @@ header .rts-btn {
   .menu-btn-toggle {
     display: none;
     margin-top: 0px;
+    border: 0; // cancel the global form-control border on buttons
     @media #{$mdsm-layout} {
       display: block;
     }
@@ -553,11 +554,12 @@ header {
 @media screen and (max-width: 768px) {
   header {
     &.header--sticky {
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid #ffffff3d;
       &.header-area-four {
-        backdrop-filter: blur(9px);
+        backdrop-filter: blur(3px);
         &.sticky {
           //~ after scroll down
+          backdrop-filter: blur(12px);
           .container {
             .row {
               .header-four-wrapper {
@@ -582,4 +584,24 @@ header {
       }
     }
   }
+}
+
+// winter-rates notification bar (rendered by lit/header.js, Nov 1 - Mar 31 only)
+// sits above the nav inside the header and disappears once the header goes sticky
+.notification-bar {
+  background-color: #012d25;
+  padding: 10px 16px;
+  text-align: center;
+  &__text {
+    margin: 0;
+    font-family: "Sackers", sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    text-transform: lowercase;
+    color: #fff;
+  }
+}
+.header--sticky.sticky .notification-bar {
+  display: none;
 }
